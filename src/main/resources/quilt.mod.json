@@ -1,25 +1,26 @@
 {
 	"schema_version": 1,
 	"quilt_loader": {
-		"group": "com.example",
-		"id": "example_mod",
+		"group": "io.github.ringlings",
+		"id": "celestemod",
 		"version": "${version}",
 		"metadata": {
-			"name": "Mod Name",
-			"description": "A short description of your mod.",
+			"name": "Celst",
+			"description": "Mod that adds stuff from a funny game called Celeste into a funny game called Minecraft",
 			"contributors": {
-				"Your name here": "Owner"
+				"Ringlings System": "Owners"
 			},
 			"contact": {
-				"homepage": "https://example.com/",
-				"issues": "https://github.com/QuiltMC/quilt-template-mod/issues",
-				"sources": "https://github.com/QuiltMC/quilt-template-mod"
+				"homepage": "none yet :pineapple:",
+				"issues": "https://github.com/ringlings/celst/issues",
+				"sources": "https://github.com/ringlings/celst"
 			},
-			"icon": "assets/example_mod/icon.png"
+			"icon": "assets/celestemod/icon.png",
+			"license": "MIT"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "com.example.example_mod.ExampleMod"
+			"init": "io.github.ringlings.celestemod.CelesteMod"
 		},
 		"depends": [
 			{
@@ -36,5 +37,5 @@
 			}
 		]
 	},
-	"mixin": "example_mod.mixins.json"
+	"mixin": "celestemod.mixins.json"
 }
