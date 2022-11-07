@@ -5,13 +5,14 @@
 		"id": "celestemod",
 		"version": "${version}",
 		"metadata": {
-			"name": "Celst",
+			"name": "Celeste Mod",
 			"description": "Mod that adds stuff from a funny game called Celeste into a funny game called Minecraft",
 			"contributors": {
-				"Ringlings System": "Owners"
+				"Ringlings System": "Owners",
+				"Fnige System": "(Attempts to help)"
 			},
 			"contact": {
-				"homepage": "none yet :pineapple:",
+				"homepage": "https://modrinth.com/mod/celestemod",
 				"issues": "https://github.com/ringlings/celst/issues",
 				"sources": "https://github.com/ringlings/celst"
 			},
@@ -20,7 +21,11 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "io.github.ringlings.celestemod.CelesteMod"
+			"init": "io.github.ringlings.celestemod.CelesteMod",
+			"client_init": "io.github.ringlings.celestemod.CelesteModClient",
+			"client_events": [
+				"io.github.ringlings.celestemod.events.DashEventClient"
+			]
 		},
 		"depends": [
 			{
