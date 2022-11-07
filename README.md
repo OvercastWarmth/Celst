@@ -1,3 +1,3 @@
 # Celeste Mod
 
-A bad idea \:pineapple:
+A bad idea :​p​i​n​e​a​p​p​l​e​:
