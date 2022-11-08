@@ -1,5 +1,6 @@
 package io.github.ringlings.celestemod.helpers;
 
+import io.github.ringlings.celestemod.config.CelesteConfigManager;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
@@ -10,6 +11,9 @@ public class DashHelper {
 	static int maxDashes;
 
 	static int coolDown = 0;
+	static int configCoolDown = CelesteConfigManager.DASH_COOL_DOWN.value();
+
+	static float velocityMultiplier = CelesteConfigManager.DASH_VELOCITY.value();
 
 	public static void dash(ClientPlayerEntity PLAYER) {
 		if (currentDashes == 0 || coolDown > 0) {
@@ -20,16 +24,16 @@ public class DashHelper {
 		float yaw = PLAYER.getYaw();
 		float roll = PLAYER.getRoll();
 
-		float x = ((-MathHelper.sin(yaw * (float) (Math.PI / 180.0)) * MathHelper.cos(pitch * (float) (Math.PI / 180.0))));
-		float y = ((-MathHelper.sin((pitch + roll) * (float) (Math.PI / 180.0))));
-		float z = ((MathHelper.cos(yaw * (float) (Math.PI / 180.0)) * MathHelper.cos(pitch * (float) (Math.PI / 180.0))));
+		float x = (-MathHelper.sin(yaw * (float) (Math.PI / 180.0)) * MathHelper.cos(pitch * (float) (Math.PI / 180.0))) * velocityMultiplier;
+		float y = (-MathHelper.sin((pitch + roll) * (float) (Math.PI / 180.0))) * velocityMultiplier;
+		float z = (MathHelper.cos(yaw * (float) (Math.PI / 180.0)) * MathHelper.cos(pitch * (float) (Math.PI / 180.0))) * velocityMultiplier;
 
 		PLAYER.setVelocity(x, y, z);
 		PLAYER.setNoGravity(true);
 		PLAYER.setNoDrag(true);
 
 		currentDashes--;
-		coolDown = 10;
+		coolDown = configCoolDown;
 	}
 
 	public static void updateDashCount(ClientPlayerEntity PLAYER, int MAX_DASHES) {

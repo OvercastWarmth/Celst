@@ -1,5 +1,6 @@
 package io.github.ringlings.celestemod;
 
+import io.github.ringlings.celestemod.config.CelesteConfigManager;
 import io.github.ringlings.celestemod.registry.CelesteEnchantments;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
@@ -14,6 +15,8 @@ public class CelesteMod implements ModInitializer {
 
 	@Override
 	public void onInitialize(ModContainer mod) {
+		new CelesteConfigManager();
+
 		CelesteEnchantments.RegisterEnchantments();
 	}
 }
