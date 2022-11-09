@@ -1,5 +1,14 @@
 {
   "enchantment.celestemod.dash": "Dash",
   "key.celestemod.category": "Celeste Mod",
-  "key.celestemod.dash": "Dash"
+  "key.celestemod.dash": "Dash",
+  "text.config.celestemod.title": "Celeste Config",
+  "text.config.celestemod.option.default_dashes": "Default Dashes",
+  "text.config.celestemod.option.default_dashes.tooltip": "Default number of dashes the player has (without the dash enchantment)",
+  "text.config.celestemod.option.max_dash_level": "Max Dash Level",
+  "text.config.celestemod.option.max_dash_level.tooltip": "Maximum level you can get for the dash enchantment in the enchanting table",
+  "text.config.celestemod.option.dash_velocity": "Dash Velocity",
+  "text.config.celestemod.option.dash_velocity.tooltip": "Multiplier for dash velocity",
+  "text.config.celestemod.option.dash_cool_down": "Dash Cool-down",
+  "text.config.celestemod.option.dash_cool_down.tooltip": "Cool-down for dashing (in ticks)"
 }
