@@ -15,11 +15,6 @@ public class DashEventClient implements ClientTickEvents.End {
 		if (client.player == null) return;
 		ClientPlayerEntity PLAYER = client.player;
 
-		// TODO: Check if chestplate is enchanted with DASH
-//		PLAYER.getArmorItems().forEach(armour -> {
-//
-//		});
-
 		boolean dashPressed = CelesteKeyBinds.DASH.isPressed();
 
 		if (dashPressed) {

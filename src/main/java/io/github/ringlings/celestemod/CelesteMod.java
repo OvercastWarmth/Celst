@@ -16,6 +16,8 @@ public class CelesteMod implements ModInitializer {
 
 	@Override
 	public void onInitialize(ModContainer mod) {
+		// :approveline:
+		LOGGER.info("hi so uh yeah hi intellij keeps screaming at me because the logger in our mod is unused so im just gonna throw this here so that it stops doing that k thanks enjoy the mod");
 
 		CelesteEnchantments.RegisterEnchantments();
 	}

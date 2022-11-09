@@ -5,6 +5,8 @@ import io.wispforest.owo.config.annotation.Modmenu;
 import io.wispforest.owo.config.annotation.RestartRequired;
 import org.quiltmc.config.api.annotations.Comment;
 
+
+@SuppressWarnings("unused")
 @Modmenu(modId = "celestemod")
 @Config(name = "celestemod", wrapperName = "CelesteConfig")
 public class CelesteConfigModel {
@@ -16,6 +18,10 @@ public class CelesteConfigModel {
 	@RestartRequired
 	@Comment("Maximum level you can get for the dash enchantment in the enchanting table")
 	public int max_dash_level = 2;
+
+	@RestartRequired
+	@Comment("Whether the dash enchantment is obtainable in an enchanting table or not")
+	public boolean dash_treasure_enchantment = true;
 
 	//	dash velocity
 	@Comment("Multiplier for dash velocity")
