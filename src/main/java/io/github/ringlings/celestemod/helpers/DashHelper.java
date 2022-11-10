@@ -13,12 +13,14 @@ public class DashHelper {
 	public static int currentDashes = 0;
 	public static int maxDashes;
 	public static int extraDashes;
-	public static boolean isDashing;
-
+	public static int configCoolDown = CelesteMod.CONFIG.dash_cool_down();
 	static int coolDown = 0;
-	static int configCoolDown = CelesteMod.CONFIG.dash_cool_down();
 
-	static float velocityMultiplier = CelesteMod.CONFIG.dash_velocity();
+	public static float velocityMultiplier = CelesteMod.CONFIG.dash_velocity();
+
+	public static double dashSlowdown = CelesteMod.CONFIG.dash_slowdown();
+
+	public static boolean isDashing;
 
 	public static void dash(ClientPlayerEntity PLAYER) {
 		if (currentDashes == 0 || coolDown > 0) {
@@ -49,6 +51,8 @@ public class DashHelper {
 		int level = EnchantmentHelper.getLevel(CelesteEnchantments.DASH, itemStack);
 		if (level >= 1) {
 			extraDashes = level;
+		} else {
+			extraDashes = 0;
 		}
 
 		if (PLAYER.isOnGround() && coolDown < configCoolDown / 2) {
@@ -63,24 +67,9 @@ public class DashHelper {
 			PLAYER.setNoGravity(false);
 			PLAYER.setNoDrag(false);
 			Vec3d vel = PLAYER.getVelocity();
-			PLAYER.setVelocity(vel.multiply(0.75));
+			PLAYER.setVelocity(vel.multiply(dashSlowdown));
 			coolDown = -1;
 			isDashing = false;
-		}
-
-		// yeah im lazy so im gonna change the player data
-
-		if (configCoolDown != CelesteMod.CONFIG.dash_cool_down()) {
-			configCoolDown = CelesteMod.CONFIG.dash_cool_down();
-		}
-		if (velocityMultiplier != CelesteMod.CONFIG.dash_velocity()) {
-			if (CelesteMod.CONFIG.dash_velocity() > 10f) {
-				CelesteMod.CONFIG.dash_velocity(10f);
-			}
-			if (CelesteMod.CONFIG.dash_velocity() < -10f) {
-				CelesteMod.CONFIG.dash_velocity(-10f);
-			}
-			velocityMultiplier = CelesteMod.CONFIG.dash_velocity();
 		}
 	}
 }

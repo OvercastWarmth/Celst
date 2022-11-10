@@ -22,9 +22,5 @@ public class DashEventClient implements ClientTickEvents.End {
 		}
 
 		DashHelper.updateDashCount(PLAYER, BASE_DASH_LEVEL);
-
-		if (BASE_DASH_LEVEL != CelesteMod.CONFIG.default_dashes()) {
-			BASE_DASH_LEVEL = CelesteMod.CONFIG.default_dashes();
-		}
 	}
 }

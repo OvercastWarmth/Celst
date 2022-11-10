@@ -2,13 +2,27 @@
   "enchantment.celestemod.dash": "Dash",
   "key.celestemod.category": "Celeste Mod",
   "key.celestemod.dash": "Dash",
-  "text.config.celestemod.title": "Celeste Config",
+  "text.config.celestemod.option.dash_cool_down": "Dash Cool-down",
+  "text.config.celestemod.option.dash_cool_down.tooltip": "Cool-down for dashing (in ticks).",
+  "text.config.celestemod.option.dash_treasure_enchantment": "Treasure Dash Enchantment",
+  "text.config.celestemod.option.dash_treasure_enchantment.tooltip": "Controls if the Dash enchantment is regarded as treasure or not. \nTreasure enchantments cannot be obtained in an Enchanting Table",
+  "text.config.celestemod.option.dash_velocity": "Dash Velocity",
+  "text.config.celestemod.option.dash_velocity.tooltip": [
+    "Multiplier for dash velocity.\n",
+    {
+      "color": "red",
+      "bold": true,
+      "text": " Warning:"
+    },
+    "Be careful with the velocity, it gets very big very fast"
+  ],
   "text.config.celestemod.option.default_dashes": "Default Dashes",
   "text.config.celestemod.option.default_dashes.tooltip": "Default number of dashes the player has (without the dash enchantment)",
   "text.config.celestemod.option.max_dash_level": "Max Dash Level",
-  "text.config.celestemod.option.max_dash_level.tooltip": "Maximum level you can get for the dash enchantment in the enchanting table",
-  "text.config.celestemod.option.dash_velocity": "Dash Velocity",
-  "text.config.celestemod.option.dash_velocity.tooltip": "Multiplier for dash velocity",
-  "text.config.celestemod.option.dash_cool_down": "Dash Cool-down",
-  "text.config.celestemod.option.dash_cool_down.tooltip": "Cool-down for dashing (in ticks)"
+  "text.config.celestemod.option.max_dash_level.tooltip": "Maximum level you can get for the dash enchantment.\nThere is no functional limit on the enchantment's level,\nthis setting controls the maximum obtainable level.",
+  "text.config.celestemod.section.dashingConfigs": "Dashing",
+  "text.config.celestemod.section.dashingConfigs.tooltip": "Nyoom",
+  "text.config.celestemod.title": "Celeste Config",
+  "text.config.celestemod.option.dash_slowdown": "Dash Slowdown",
+  "text.config.celestemod.option.dash_slowdown.tooltip": "Multiplied by the current velocity at the end of the dash."
 }

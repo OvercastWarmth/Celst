@@ -1,6 +1,7 @@
 package io.github.ringlings.celestemod;
 
 import io.github.ringlings.celestemod.config.CelesteConfig;
+import io.github.ringlings.celestemod.config.CelesteModConfigHooks;
 import io.github.ringlings.celestemod.registry.CelesteEnchantments;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
@@ -20,5 +21,7 @@ public class CelesteMod implements ModInitializer {
 		LOGGER.info("hi so uh yeah hi intellij keeps screaming at me because the logger in our mod is unused so im just gonna throw this here so that it stops doing that k thanks enjoy the mod");
 
 		CelesteEnchantments.RegisterEnchantments();
+
+		CelesteModConfigHooks.subscribeToHooks();
 	}
 }

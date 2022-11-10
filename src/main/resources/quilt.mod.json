@@ -39,8 +39,11 @@
 			{
 				"id": "minecraft",
 				"versions": ">=1.19.2"
+			},
+			{
+				"id": "owo",
+				"versions": ">=0.8.5"
 			}
 		]
-	},
-	"mixin": "celestemod.mixins.json"
+	}
 }
