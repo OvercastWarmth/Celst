@@ -22,10 +22,7 @@
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
 			"init": "io.github.ringlings.celestemod.CelesteMod",
-			"client_init": "io.github.ringlings.celestemod.CelesteModClient",
-			"client_events": [
-				"io.github.ringlings.celestemod.events.DashEventClient"
-			]
+			"client_init": "io.github.ringlings.celestemod.CelesteModClient"
 		},
 		"depends": [
 			{

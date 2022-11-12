@@ -1,5 +1,6 @@
 package io.github.ringlings.celestemod.config;
 
+import io.wispforest.owo.config.Option;
 import io.wispforest.owo.config.annotation.*;
 
 
@@ -10,23 +11,24 @@ public class CelesteConfigModel {
 	@SectionHeader("dashingConfigs")
 
 	@Hook
-//	@Sync(Option.SyncMode.OVERRIDE_CLIENT)
-	public int default_dashes = 0;
+	@Sync(Option.SyncMode.OVERRIDE_CLIENT)
+	public int defaultDashes = 0;
 
 	@Hook
-//	@Sync(Option.SyncMode.OVERRIDE_CLIENT)
-	public float dash_velocity = 2.0f;
+	@Sync(Option.SyncMode.OVERRIDE_CLIENT)
+	public float dashVelocity = 2.0f;
 
 	@Hook
-//	@Sync(Option.SyncMode.OVERRIDE_CLIENT)
-	public int dash_cool_down = 5;
+	@Sync(Option.SyncMode.OVERRIDE_CLIENT)
+	public int dashCoolDown = 5;
 
 	@Hook
-	public double dash_slowdown = 0.6;
+	@Sync(Option.SyncMode.OVERRIDE_CLIENT)
+	public double dashSlowdown = 0.6;
 
 	@RestartRequired
-	public int max_dash_level = 2;
+	public int maxDashLevel = 2;
 
 	@RestartRequired
-	public boolean dash_treasure_enchantment = true;
+	public boolean dashTreasureEnchantment = true;
 }

@@ -1,9 +1,11 @@
-package io.github.ringlings.celestemod.key_binds;
+package io.github.ringlings.celestemod.keybinds;
 
 import net.minecraft.client.option.KeyBind;
 import org.lwjgl.glfw.GLFW;
+import org.quiltmc.loader.api.minecraft.ClientOnly;
 
 // We looked at Ok Zoomer's keybind code to make this, thamk ennui
+@ClientOnly
 public class CelesteKeyBinds {
 
 	// Keybind Category

@@ -12,10 +12,10 @@ public class DashEnchantment extends Enchantment {
 
 	@Override
 	public int getMaxLevel() {
-		return CelesteMod.CONFIG.max_dash_level();
+		return CelesteMod.CONFIG.maxDashLevel();
 	}
 
 	public boolean isTreasure() {
-		return CelesteMod.CONFIG.dash_treasure_enchantment();
+		return CelesteMod.CONFIG.dashTreasureEnchantment();
 	}
 }
