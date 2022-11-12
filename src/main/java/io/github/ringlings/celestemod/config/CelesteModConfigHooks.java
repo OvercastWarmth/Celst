@@ -9,20 +9,9 @@ import org.quiltmc.loader.api.minecraft.ClientOnly;
 @ClientOnly
 public class CelesteModConfigHooks {
 	public static void subscribeToHooks() {
-		CelesteMod.CONFIG.subscribeToDefaultDashes(value -> {
-			DashEventClient.baseDashLevel = value;
-		});
-
-		CelesteMod.CONFIG.subscribeToDashVelocity(value -> {
-			DashHelperClient.velocityMultiplier = value;
-		});
-
-		CelesteMod.CONFIG.subscribeToDashCoolDown(value -> {
-			DashHelperClient.configCoolDown = value;
-		});
-
-		CelesteMod.CONFIG.subscribeToDashSlowdown(value -> {
-			DashHelperClient.dashSlowdown = value;
-		});
+		CelesteMod.CONFIG.subscribeToDefaultDashes(value -> DashEventClient.baseDashLevel = value);
+		CelesteMod.CONFIG.subscribeToDashVelocity(value -> DashHelperClient.velocityMultiplier = value);
+		CelesteMod.CONFIG.subscribeToDashCoolDown(value -> DashHelperClient.configCoolDown = value);
+		CelesteMod.CONFIG.subscribeToDashSlowdown(value -> DashHelperClient.dashSlowdown = value);
 	}
 }
